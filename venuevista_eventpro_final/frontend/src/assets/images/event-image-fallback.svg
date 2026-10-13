@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" fill="none">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1200" y2="750" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#18211f"/>
+      <stop offset="1" stop-color="#344944"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="matrix(0 370 -510 0 600 260)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e84855" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#e84855" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <path fill="url(#background)" d="M0 0h1200v750H0z"/>
+  <path fill="url(#glow)" d="M0 0h1200v750H0z"/>
+  <path stroke="#f7d7a1" stroke-opacity=".55" stroke-width="3" d="m110 750 290-450 200 270 130-210 360 390"/>
+  <path stroke="#fff" stroke-opacity=".25" stroke-width="2" d="M200 0v220m800-220v220M0 600h1200"/>
+  <circle cx="600" cy="250" r="80" fill="#f7d7a1" fill-opacity=".12"/>
+  <circle cx="600" cy="250" r="42" fill="#f7d7a1" fill-opacity=".2"/>
+  <path fill="#fff" fill-opacity=".78" d="M568 233h64a13 13 0 0 1 13 13v33a13 13 0 0 1-13 13h-64a13 13 0 0 1-13-13v-33a13 13 0 0 1 13-13Zm32 12a17 17 0 1 0 0 34 17 17 0 0 0 0-34Zm-25-20h18l7 10h-32l7-10Z"/>
+</svg>

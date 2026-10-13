@@ -1,0 +1,6 @@
+{
+  "name": "Showflow",
+  "description": "Enterprise event management, interactive auditorium seating engine, live box office operations, and patron ticketing platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

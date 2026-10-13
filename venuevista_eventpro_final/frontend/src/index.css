@@ -1,0 +1,536 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --surface: #f4f2ec;
+    --surface-dim: #e3e5ef;
+    --surface-container-lowest: #fffefa;
+    --surface-container-low: #fbfaf6;
+    --surface-container: #f4f2ec;
+    --surface-container-high: #e8ecff;
+    --surface-container-highest: #dce2ff;
+    --on-surface: #1b1d29;
+    --on-surface-variant: #5f6371;
+    --outline: #7d8190;
+    --outline-variant: #d8d9df;
+    --primary: #3157e8;
+    --primary-container: #536ff0;
+    --secondary: #ff7859;
+    --secondary-container: #ffe0d6;
+    --tertiary: #c8e85b;
+  }
+
+  body {
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f4f2ec;
+    background-image: radial-gradient(#d8d6ce 0.6px, transparent 0.6px);
+    background-size: 20px 20px;
+    color: #1b1d29;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: "DM Serif Display", Georgia, serif;
+    font-weight: 400;
+  }
+
+  .font-brand {
+    font-family: "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .font-mono, .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer utilities {
+  [class*="bg-[#fff8f7]"], [class*="bg-[#f6f7f5]"], [class*="bg-[#f7f6f4]"], [class*="bg-[#fcf4f2]"], [class*="bg-[#faf0ee]"], [class*="bg-[#f9ecea]"], [class*="bg-[#f8ebe9]"] {
+    background-color: #f4f2ec !important;
+  }
+
+  [class*="bg-[#fef1ef]"], [class*="bg-[#f5e3e0]"], [class*="bg-[#f3dedb]"], [class*="bg-[#f4dfdc]"], [class*="bg-[#f2dfdc]"], [class*="bg-[#f4e4e1]"], [class*="bg-[#f7e7e4]"], [class*="bg-[#f2e5e3]"], [class*="bg-[#f5deda]"], [class*="bg-[#faece9]"], [class*="bg-[#fff5f5]"], [class*="bg-[#fff0f1]"] {
+    background-color: #e8ecff !important;
+  }
+
+  [class*="bg-[#8b4d45]"], [class*="bg-[#7d4842]"], [class*="bg-[#d52b3a]"], [class*="bg-[#e84855]"], [class*="bg-[#b86b62]"] {
+    background-color: #3157e8 !important;
+  }
+
+  [class*="bg-[#201a19]"], [class*="bg-[#211f1e]"], [class*="bg-[#1c2926]"], [class*="bg-[#18211f]"], [class*="bg-[#17332d]"], [class*="bg-[#142721]"] {
+    background-color: #1b1d29 !important;
+  }
+
+  [class*="text-[#201a19]"], [class*="text-[#211f1e]"], [class*="text-[#1c2926]"], [class*="text-[#272322]"], [class*="text-[#3b2b29]"] {
+    color: #1b1d29 !important;
+  }
+
+  [class*="text-[#8b4d45]"], [class*="text-[#7d4842]"], [class*="text-[#d52b3a]"], [class*="text-[#e84855]"], [class*="text-[#b92231]"] {
+    color: #3157e8 !important;
+  }
+
+  [class*="border-[#ebd9d6]"], [class*="border-[#e8e2df]"], [class*="border-[#e7d2ce]"], [class*="border-[#ead8d5]"], [class*="border-[#e0e7e2]"], [class*="border-[#e1e7e3]"], [class*="border-[#d6ddd2]"] {
+    border-color: #d8d9df !important;
+  }
+
+  [class*="rounded-3xl"], [class*="rounded-2xl"], [class*="rounded-xl"] {
+    border-radius: 8px !important;
+  }
+
+  .vv-operator-sidebar {
+    background-color: #e8ecff !important;
+    border-color: #d1d8fa !important;
+  }
+
+  .vv-operator-sidebar button {
+    color: #30364f;
+  }
+
+  .vv-operator-sidebar [class*="bg-[#f4b8b0]"] {
+    background-color: #c8e85b !important;
+    color: #1b1d29 !important;
+  }
+
+  .vv-operator-header {
+    background-color: rgb(255 254 250 / 94%) !important;
+    border-color: #d8d9df !important;
+  }
+
+  .vv-seatmap {
+    background-color: #f1f2f8 !important;
+    background-image: radial-gradient(#c6cbe0 0.8px, transparent 0.8px) !important;
+    background-size: 15px 15px !important;
+    border-color: #d7d9e4 !important;
+  }
+
+  .vv-seating-workspace .vv-plan-controls {
+    background-color: #fffefa !important;
+    border-color: #deded7 !important;
+  }
+
+  .vv-seat-zone {
+    background-color: #fffefa !important;
+    border-color: #d8d9df !important;
+    box-shadow: 0 6px 18px rgb(27 29 41 / 4%);
+  }
+
+  .vv-seat-zone-center {
+    background-color: #edf0ff !important;
+    border-color: #cdd5ff !important;
+  }
+
+  .vv-seat-zone-upper {
+    background-color: #f7f4ea !important;
+  }
+
+  .vv-seatmap [class*="bg-[#7b5853]"] {
+    background-color: #3157e8 !important;
+  }
+
+  .vv-seatmap [class*="hover:bg-[#694641]"]:hover {
+    background-color: #2445c4 !important;
+  }
+
+  .vv-seatmap [class*="bg-[#ddb1b8]"] {
+    background-color: #d9dce5 !important;
+  }
+
+  .vv-seatmap [class*="bg-[#6f572c]"] {
+    background-color: #d9ef72 !important;
+  }
+
+  .vv-seatmap [class*="bg-[#836864]"] {
+    background-color: #777b8a !important;
+  }
+
+  .vv-seatmap .grid > .vv-seat-zone:first-child {
+    transform: rotate(-2deg);
+  }
+
+  .vv-seatmap .grid > .vv-seat-zone:last-child {
+    transform: rotate(2deg);
+  }
+
+  .vv-dashboard-intro {
+    background-color: #202923 !important;
+    border-color: #354138 !important;
+    border-left: 4px solid #d9ef72 !important;
+    color: #fffefa;
+  }
+
+  .vv-dashboard-intro h1 {
+    color: #fffefa !important;
+    font-family: "DM Serif Display", Georgia, serif;
+    font-weight: 400;
+  }
+
+  .vv-dashboard-intro p,
+  .vv-dashboard-intro div {
+    color: #d8ded4;
+  }
+
+  .vv-dashboard-intro button:not([class*="bg-[#b86b62]"]) {
+    color: #e8ebdf;
+  }
+
+  .vv-dashboard-kpis > div {
+    border: 0 !important;
+    border-top: 2px solid #d9ef72 !important;
+    border-radius: 0 !important;
+    background: #fffefa !important;
+    box-shadow: 0 8px 24px rgb(27 29 41 / 4%);
+  }
+
+  .vv-marketplace {
+    background-color: #f4f2ec;
+  }
+
+  .vv-market-header {
+    background-color: #202923 !important;
+    color: #fffefa;
+    box-shadow: 1px 0 0 rgb(27 29 41 / 8%);
+    backdrop-filter: blur(16px);
+  }
+
+  @media (min-width: 1024px) {
+    .vv-marketplace {
+      display: grid;
+      grid-template-columns: 258px minmax(0, 1fr);
+      align-items: start;
+    }
+
+    .vv-market-header {
+      position: sticky;
+      top: 0;
+      grid-column: 1;
+      grid-row: 1;
+      display: flex;
+      width: 258px;
+      height: 100vh;
+      flex-direction: column;
+      border-right: 1px solid #354138;
+      border-bottom: 0;
+      box-shadow: 1px 0 0 rgb(27 29 41 / 8%);
+      background-color: #202923 !important;
+      backdrop-filter: none;
+    }
+
+    .vv-market-header > div:first-child {
+      display: flex;
+      width: 100%;
+      max-width: none;
+      height: 100%;
+      margin: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 17px;
+      padding: 24px 18px;
+    }
+
+    .vv-market-header > div:first-child > button:first-child {
+      width: 100%;
+      padding-bottom: 22px;
+      border-bottom: 1px solid #354138;
+    }
+
+    .vv-market-header .vv-rail-brand .font-brand span:first-child {
+      color: #d9ef72 !important;
+    }
+
+    .vv-market-header .vv-rail-brand .font-brand span:last-child {
+      color: #fffefa !important;
+    }
+
+    .vv-market-header .vv-rail-search {
+      display: flex;
+      width: 100%;
+      flex: none;
+      padding: 11px 12px;
+      border-color: #414d43 !important;
+      background-color: #28332c !important;
+      color: #f6f4ed;
+    }
+
+    .vv-market-header .vv-rail-search svg {
+      color: #d9ef72;
+    }
+
+    .vv-market-header .vv-rail-search input {
+      color: #fffefa;
+    }
+
+    .vv-market-header .vv-rail-search input::placeholder {
+      color: #b8c2b8;
+    }
+
+    .vv-market-header label[aria-label="Choose city"],
+    .vv-market-header label:has(select[aria-label="Choose city"]) {
+      width: 100%;
+      min-height: 44px;
+      margin: 0;
+      border-color: #414d43 !important;
+      background-color: #28332c !important;
+      color: #fffefa;
+    }
+
+    .vv-market-header .vv-rail-city svg {
+      color: #ff9779;
+    }
+
+    .vv-market-header .vv-rail-city select {
+      width: 100%;
+      max-width: none;
+      color: #fffefa;
+    }
+
+    .vv-market-header > div:first-child > button:not(:first-child) {
+      width: 100%;
+      min-height: 44px;
+      justify-content: flex-start;
+      padding: 0 12px;
+      text-align: left;
+    }
+
+    .vv-market-header .vv-rail-action {
+      border-left: 2px solid transparent;
+      color: #e6e8dd;
+    }
+
+    .vv-market-header .vv-rail-action:hover {
+      border-left-color: #d9ef72;
+      background-color: #303b33 !important;
+      color: #d9ef72 !important;
+    }
+
+    .vv-market-header .vv-rail-signin {
+      min-height: 46px;
+      justify-content: center;
+      margin-top: 2px;
+      background-color: #d9ef72 !important;
+      color: #202923 !important;
+    }
+
+    .vv-market-header .vv-rail-signin:hover {
+      background-color: #e5f79a !important;
+    }
+
+    .vv-market-header > div:first-child > button:last-child {
+      margin-top: auto;
+      border-top: 1px solid #354138;
+      padding-top: 18px;
+      color: #c2cabe;
+    }
+
+    .vv-market-header .vv-rail-organizer:hover {
+      color: #d9ef72;
+    }
+
+    .vv-marketplace > main {
+      grid-column: 2;
+      grid-row: 1;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 30px clamp(24px, 3.5vw, 56px) 64px;
+    }
+  }
+
+  .vv-search:focus-within {
+    border-color: #3157e8 !important;
+    box-shadow: 0 0 0 3px rgb(49 87 232 / 10%);
+  }
+
+  .vv-event-card {
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none;
+    transition: transform 180ms ease;
+  }
+
+  .vv-event-card:hover {
+    box-shadow: none;
+    transform: translateY(-4px);
+  }
+
+  .vv-event-card h3 {
+    font-family: "DM Serif Display", Georgia, serif;
+    font-weight: 400;
+  }
+
+  .vv-event-card > div:first-child {
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgb(27 29 41 / 9%);
+  }
+
+  .vv-featured h1 {
+    font-family: "DM Serif Display", Georgia, serif;
+    font-weight: 400;
+  }
+
+  .vv-event-card .vv-ticket-action {
+    background-color: #ff7859 !important;
+    color: #202923 !important;
+  }
+
+  .vv-login-page {
+    background-color: #f4f2ec !important;
+  }
+
+  .vv-login-background {
+    background-color: #202923;
+  }
+
+  .vv-login-background img {
+    filter: brightness(0.44) saturate(0.8);
+  }
+
+  .vv-login-background-overlay {
+    background-image: linear-gradient(115deg, rgb(18 27 23 / 70%), rgb(18 27 23 / 26%) 58%, rgb(18 27 23 / 50%)) !important;
+  }
+
+  .vv-login-header {
+    background-color: rgb(255 254 250 / 88%) !important;
+    border-color: rgb(255 255 255 / 42%) !important;
+    backdrop-filter: blur(14px);
+  }
+
+  .vv-login-main {
+    min-height: calc(100vh - 78px);
+    background: transparent !important;
+  }
+
+  .vv-login-panel {
+    border: 0;
+  }
+
+  .vv-login-form {
+    border: 1px solid rgb(255 255 255 / 72%);
+    border-radius: 12px;
+    background: #fffefa;
+    box-shadow: 0 24px 80px rgb(0 0 0 / 26%);
+  }
+
+  .vv-login-form h2 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+  }
+
+  .vv-login-form [role="tablist"] {
+    background-color: #f0f1f6 !important;
+    border-color: #dedfe7 !important;
+  }
+
+  .vv-login-form [role="tablist"] button[aria-selected="true"] {
+    background-color: #3157e8 !important;
+    color: #fffefa !important;
+  }
+
+  .vv-login-form input:not([type="checkbox"]) {
+    border-color: #d8d9df;
+  }
+
+  .vv-login-form input:focus {
+    border-color: #3157e8 !important;
+    box-shadow: 0 0 0 3px rgb(49 87 232 / 10%);
+  }
+
+  @media (max-width: 1023px) {
+    .vv-login-main {
+      min-height: calc(100vh - 78px);
+    }
+
+    .vv-login-panel {
+      width: 100%;
+    }
+
+    .vv-login-form {
+      max-width: 440px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .vv-login-main {
+      padding: 12px;
+    }
+
+    .vv-login-background {
+      inset: 0;
+    }
+
+    .vv-login-form {
+      padding: 24px;
+    }
+  }
+
+  .vv-featured {
+    background-color: #1b1d29 !important;
+    animation: vv-arrive 520ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .vv-checkout-page {
+    background-color: #f4f2ec !important;
+  }
+
+  .vv-checkout-hero {
+    isolation: isolate;
+    animation: vv-arrive 420ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .vv-seat-canvas {
+    background-color: #f2f3f8 !important;
+    background-image: radial-gradient(#cdd1e0 0.7px, transparent 0.7px) !important;
+    background-size: 14px 14px !important;
+  }
+
+  .vv-seat-svg g[role="button"]:focus-visible {
+    outline: 2px solid #ff7859;
+    outline-offset: 3px;
+  }
+
+  @keyframes vv-arrive {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  * {
+    letter-spacing: 0 !important;
+  }
+
+  button, input, select, textarea {
+    transition-duration: 160ms;
+  }
+
+  input[type="checkbox"], input[type="range"] {
+    accent-color: #3157e8;
+  }
+
+  :focus-visible {
+    outline: 2px solid #3157e8;
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(49, 87, 232, 0.24);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(49, 87, 232, 0.42);
+}

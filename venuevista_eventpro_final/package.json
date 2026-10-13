@@ -1,0 +1,12 @@
+{
+  "name": "showflow-event-workspace",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm install --prefix frontend",
+    "dev": "node scripts/dev.mjs",
+    "build": "npm run build --prefix frontend",
+    "lint": "npm run lint --prefix frontend",
+    "backend:run": "cd backend && mvn spring-boot:run",
+    "backend:test": "cd backend && mvn test"
+  }
+}

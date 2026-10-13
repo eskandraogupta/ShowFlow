@@ -1,0 +1,12 @@
+node_modules/
+build/
+dist/
+backend/target/
+backend/data/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+.rocketride/
+.env
